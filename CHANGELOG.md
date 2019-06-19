@@ -2,4 +2,5 @@
 
 #### Version 0.1
 
-* initial release
+* Metro/Ciliora/Dashes styles
+* user can reverse boxes position
