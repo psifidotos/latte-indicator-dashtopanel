@@ -1,0 +1,22 @@
+[Desktop Entry]
+Name=Dash To Panel
+Comment=Dash To Panel Latte indicator style
+
+Encoding=UTF-8
+Type=Service
+Icon=latte-dock
+X-Plasma-API=declarativeappletscript
+X-KDE-ServiceTypes=Latte/Indicator
+
+X-Latte-MainScript=ui/main.qml
+X-Latte-ConfigUi=config/config.qml
+X-Latte-ConfigXml=config/main.xml
+
+X-KDE-PluginInfo-Author=Michail Vourlakos
+X-KDE-PluginInfo-Email=mvourlakos@gmail.com
+X-KDE-PluginInfo-Name=org.kde.latte.dashtopanel
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-Category=Latte Indicator
+X-KDE-PluginInfo-License=GPL v2+
+X-KDE-PluginInfo-EnabledByDefault=true
+
