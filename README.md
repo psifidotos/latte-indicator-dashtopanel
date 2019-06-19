@@ -1,28 +1,28 @@
-# Latte Unity Indicator
-This is a Unity style indicator for [Latte Dock](https://phabricator.kde.org/source/latte-dock/repository/master/)
+# Latte "Dash To Panel" Indicator
+This is a "Dash To Panel" style indicator for [Latte Dock](https://phabricator.kde.org/source/latte-dock/repository/master/)
 
 <p align="center">
-<img src="https://i.imgur.com/gPTAx78.png" width="480" ><br/>
-<i>triangles style</i>
+<img src="https://i.imgur.com/9YOlbaC.png" width="480" ><br/>
+<i>metro style</i>
 </p>
 
 <p align="center">
-<img src="https://i.imgur.com/WDFV3z3.png" width="480" ><br/>
-<i>circles style</i>
+<img src="https://i.imgur.com/jBVWJyo.png" width="480" ><br/>
+<i>ciliora style</i>
 </p>
 
 <p align="center">
-<img src="https://i.imgur.com/g8lm88B.png" width="480" ><br/>
-<i>rectangles style</i>
+<img src="https://i.imgur.com/d3kHMBF.png" width="480" ><br/>
+<i>dashes style</i>
 </p>
 
 <p align="center">
-<img src="https://i.imgur.com/uWgQulB.png" width="480" ><br/>
-<i>unity style in parabolic effect</i>
+<img src="https://i.imgur.com/0XsXflm.png" width="480" ><br/>
+<i>metro style in parabolic effect</i>
 </p>
 
 <p align="center">
-<img src="https://i.imgur.com/gOhXIpj.png" width="480" ><br/>
+<img src="https://i.imgur.com/xCW2Vm9.png" width="480" ><br/>
 <i>indicator options</i>
 </p>
 
