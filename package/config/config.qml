@@ -33,6 +33,10 @@ import org.kde.latte.components 1.0 as LatteComponents
 ColumnLayout {
     Layout.fillWidth: true
 
+    LatteComponents.SubHeader {
+        text: i18n("Style")
+    }
+
     ColumnLayout {
         spacing: 0
 
@@ -91,6 +95,64 @@ ColumnLayout {
                 tooltip: i18n("Use Dashes style for item states")
 
                 readonly property int style: 2 /*Dashes*/
+            }
+        }
+    }
+
+    LatteComponents.SubHeader {
+        text: i18n("Background")
+    }
+
+    ColumnLayout {
+        spacing: 0
+
+        RowLayout {
+            Layout.fillWidth: true
+            spacing: 2
+
+
+            PlasmaComponents.Label {
+                Layout.minimumWidth: implicitWidth
+                horizontalAlignment: Text.AlignLeft
+                Layout.rightMargin: units.smallSpacing
+                text: i18n("Max Opacity")
+            }
+
+            LatteComponents.Slider {
+                id: maxOpacitySlider
+                Layout.fillWidth: true
+
+                leftPadding: 0
+                value: indicator.configuration.maxBackgroundOpacity * 100
+                from: 40
+                to: 100
+                stepSize: 5
+                wheelEnabled: false
+
+                function updateMaxOpacity() {
+                    if (!pressed) {
+                        indicator.configuration.maxBackgroundOpacity = value/100;
+                    }
+                }
+
+                onPressedChanged: {
+                    updateMaxOpacity();
+                }
+
+                Component.onCompleted: {
+                    valueChanged.connect(updateMaxOpacity);
+                }
+
+                Component.onDestruction: {
+                    valueChanged.disconnect(updateMaxOpacity);
+                }
+            }
+
+            PlasmaComponents.Label {
+                text: i18nc("number in percentage, e.g. 85 %","%0 %").arg(maxOpacitySlider.value)
+                horizontalAlignment: Text.AlignRight
+                Layout.minimumWidth: theme.mSize(theme.defaultFont).width * 4
+                Layout.maximumWidth: theme.mSize(theme.defaultFont).width * 4
             }
         }
     }

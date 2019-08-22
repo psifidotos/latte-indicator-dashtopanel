@@ -16,5 +16,8 @@
     <entry name="isReversed" type="Bool">
         <default>false</default>
     </entry>       
+    <entry name="maxBackgroundOpacity" type="Double">
+        <default>0.6</default>
+    </entry>
   </group>
 </kcfg>
