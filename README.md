@@ -22,13 +22,13 @@ This is a "Dash To Panel" style indicator for [Latte Dock](https://phabricator.k
 </p>
 
 <p align="center">
-<img src="https://i.imgur.com/xCW2Vm9.png" width="480" ><br/>
+<img src="https://i.imgur.com/4jO5PIm.png" width="480" ><br/>
 <i>indicator options</i>
 </p>
 
 # Requires
 
-- Latte Git Version
+- Latte v0.9.x
 
 # Install
 
