@@ -46,15 +46,23 @@ LatteComponents.IndicatorItem {
         anchors.fill: parent
         color: indicator.palette.textColor
 
-        readonly property real opacityStep: indicator.configuration.maxBackgroundOpacity > 0.6 ? 0.15 : 0.1
+        readonly property real opacityStep: {
+            if (indicator.configuration.maxBackgroundOpacity > 0.6) {
+                return 0.25;
+            } else if (indicator.configuration.maxBackgroundOpacity >= 0.3) {
+                return 0.12;
+            }
+
+            return 0.05;
+        }
 
         opacity: {
             if (indicator.isHovered && indicator.hasActive) {
                 return indicator.configuration.maxBackgroundOpacity;
             } else if (indicator.hasActive) {
-                return indicator.configuration.maxBackgroundOpacity - 2*opacityStep;
+                return indicator.configuration.maxBackgroundOpacity - opacityStep;
             } else if (indicator.isHovered) {
-                return indicator.configuration.maxBackgroundOpacity - 3*opacityStep;
+                return indicator.configuration.maxBackgroundOpacity - 2*opacityStep;
             }
 
             return 0;
