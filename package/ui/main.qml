@@ -74,7 +74,7 @@ LatteComponents.IndicatorItem {
         columnSpacing: isHorizontal ? spacing : 0
 
         readonly property int spacing: indicator.currentIconSize * 0.08
-        readonly property int thickness: Math.max(indicator.currentIconSize * 0.1, 2)
+        readonly property int thickness: Math.max(indicator.currentIconSize * indicator.configuration.lineThickness, 2)
 
         readonly property int minLength: isCilioraStyle ? thickness : 2*thickness
 

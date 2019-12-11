@@ -19,5 +19,8 @@
     <entry name="maxBackgroundOpacity" type="Double">
         <default>0.6</default>
     </entry>
+    <entry name="lineThickness" type="Double">
+        <default>0.1</default>
+    </entry>
   </group>
 </kcfg>
