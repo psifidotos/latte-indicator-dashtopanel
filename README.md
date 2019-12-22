@@ -33,11 +33,9 @@ This is a "Dash To Panel" style indicator for [Latte Dock](https://phabricator.k
 # Install
 
 From Latte UI: **Effects -> Indicators -> Style -> Get New Indicators...**
-
-From command line: ``kpackagetool5 -i . -t Latte/Indicator``
+<br>From command line: ``kpackagetool5 -i . -t Latte/Indicator``
 
 # Update
 
 From Latte UI: **Effects -> Indicators -> Style -> Get New Indicators... -> Installed**
-
-From command line: ``kpackagetool5 -u . -t Latte/Indicator``
+<br>From command line: ``kpackagetool5 -u . -t Latte/Indicator``
