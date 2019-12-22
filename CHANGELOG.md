@@ -1,5 +1,10 @@
 ### CHANGELOG
 
+#### Version 0.3.0
+
+* option for line thickness
+* improve different opacity steps based on max opaxity value
+
 #### Version 0.2
 
 * add option for user to set the maximum background opacity
