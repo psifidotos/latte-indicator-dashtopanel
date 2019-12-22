@@ -22,7 +22,7 @@ This is a "Dash To Panel" style indicator for [Latte Dock](https://phabricator.k
 </p>
 
 <p align="center">
-<img src="https://i.imgur.com/4jO5PIm.png" width="480" ><br/>
+<img src="https://imgur.com/Ufu9jRM.png" width="480" ><br/>
 <i>indicator options</i>
 </p>
 
@@ -36,3 +36,8 @@ From Latte UI: **Effects -> Indicators -> Style -> Get New Indicators...**
 
 From command line: ``kpackagetool5 -i . -t Latte/Indicator``
 
+# Update
+
+From Latte UI: **Effects -> Indicators -> Style -> Get New Indicators... -> Installed**
+
+From command line: ``kpackagetool5 -u . -t Latte/Indicator``
