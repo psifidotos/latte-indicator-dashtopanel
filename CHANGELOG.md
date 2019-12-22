@@ -3,7 +3,7 @@
 #### Version 0.3.0
 
 * option for line thickness
-* improve different opacity steps based on max opaxity value
+* improve different opacity steps based on max opacity value
 
 #### Version 0.2
 
