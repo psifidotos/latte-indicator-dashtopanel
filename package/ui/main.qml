@@ -32,7 +32,8 @@ LatteComponents.IndicatorItem {
     needsIconColors: true
     minLengthPadding: 0.03
 
-    readonly property int thickness: isVertical ? width : height
+    readonly property int thickness: isVertical ? width - screenEdgeMargin : height - screenEdgeMargin
+    readonly property int screenEdgeMargin: indicator.hasOwnProperty("screenEdgeMargin") ? indicator.screenEdgeMargin : 0
 
     readonly property bool isHorizontal: plasmoid.formFactor === PlasmaCore.Types.Horizontal
     readonly property bool isVertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
@@ -44,6 +45,11 @@ LatteComponents.IndicatorItem {
     //! Background
     Rectangle {
         anchors.fill: parent
+        anchors.topMargin: plasmoid.location === PlasmaCore.Types.TopEdge ? root.screenEdgeMargin : 0
+        anchors.bottomMargin: plasmoid.location === PlasmaCore.Types.BottomEdge ? root.screenEdgeMargin : 0
+        anchors.leftMargin: plasmoid.location === PlasmaCore.Types.LeftEdge ? root.screenEdgeMargin : 0
+        anchors.rightMargin: plasmoid.location === PlasmaCore.Types.RightEdge ? root.screenEdgeMargin : 0
+
         color: indicator.palette.textColor
 
         readonly property real opacityStep: {
@@ -71,6 +77,10 @@ LatteComponents.IndicatorItem {
 
     GridLayout {
         id: boxesLayout
+        anchors.topMargin: plasmoid.location === PlasmaCore.Types.TopEdge ? root.screenEdgeMargin : 0
+        anchors.bottomMargin: plasmoid.location === PlasmaCore.Types.BottomEdge ? root.screenEdgeMargin : 0
+        anchors.leftMargin: plasmoid.location === PlasmaCore.Types.LeftEdge ? root.screenEdgeMargin : 0
+        anchors.rightMargin: plasmoid.location === PlasmaCore.Types.RightEdge ? root.screenEdgeMargin : 0
 
         width: isDashesStyle && isHorizontal ? undefined : (isHorizontal ? parent.width : undefined)
         height: isDashesStyle && isVertical ? undefined: (isVertical ? parent.height : undefined)
