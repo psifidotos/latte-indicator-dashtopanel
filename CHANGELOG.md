@@ -1,5 +1,9 @@
 ### CHANGELOG
 
+#### Version 0.3.1
+
+* support floating docks and panels
+
 #### Version 0.3.0
 
 * option for line thickness
