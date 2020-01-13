@@ -42,6 +42,22 @@ LatteComponents.IndicatorItem {
     readonly property bool isCilioraStyle: indicator.configuration.style === 1
     readonly property bool isDashesStyle: indicator.configuration.style === 2
 
+    //! Bindings for properties that have introduced
+    //! later on Latte versions > 0.9.2
+    Binding{
+        target: root
+        property: "enabledForApplets"
+        when: root.hasOwnProperty("enabledForApplets")
+        value: indicator.configuration.enabledForApplets
+    }
+
+    Binding{
+        target: root
+        property: "lengthPadding"
+        when: root.hasOwnProperty("lengthPadding")
+        value: indicator.configuration.lengthPadding
+    }
+
     //! Background
     Rectangle {
         anchors.fill: parent

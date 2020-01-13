@@ -22,5 +22,11 @@
     <entry name="lineThickness" type="Double">
         <default>0.1</default>
     </entry>
+    <entry name="enabledForApplets" type="Bool">
+        <default>true</default>
+    </entry>
+    <entry name="lengthPadding" type="Double">
+        <default>0.10</default>
+    </entry>
   </group>
 </kcfg>

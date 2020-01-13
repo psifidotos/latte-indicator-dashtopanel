@@ -33,6 +33,8 @@ import org.kde.latte.components 1.0 as LatteComponents
 ColumnLayout {
     Layout.fillWidth: true
 
+    readonly property bool deprecatedPropertiesAreHidden: dialog && dialog.hasOwnProperty("deprecatedOptionsAreHidden") && dialog.deprecatedOptionsAreHidden
+
     LatteComponents.SubHeader {
         text: i18n("Style")
     }
@@ -105,6 +107,45 @@ ColumnLayout {
 
     ColumnLayout {
         spacing: 0
+
+        RowLayout {
+            Layout.fillWidth: true
+            spacing: units.smallSpacing
+            visible: deprecatedPropertiesAreHidden
+
+            PlasmaComponents.Label {
+                text: i18n("Length")
+                horizontalAlignment: Text.AlignLeft
+            }
+
+            LatteComponents.Slider {
+                id: lengthIntMarginSlider
+                Layout.fillWidth: true
+
+                value: Math.round(indicator.configuration.lengthPadding * 100)
+                from: 3
+                to: maxMargin
+                stepSize: 1
+                wheelEnabled: false
+
+                readonly property int maxMargin: 80
+
+                onPressedChanged: {
+                    if (!pressed) {
+                        indicator.configuration.lengthPadding = value / 100;
+                    }
+                }
+            }
+
+            PlasmaComponents.Label {
+                text: i18nc("number in percentage, e.g. 85 %","%0 %").arg(currentValue)
+                horizontalAlignment: Text.AlignRight
+                Layout.minimumWidth: theme.mSize(theme.defaultFont).width * 4
+                Layout.maximumWidth: theme.mSize(theme.defaultFont).width * 4
+
+                readonly property int currentValue: lengthIntMarginSlider.value
+            }
+        }
 
         RowLayout {
             Layout.fillWidth: true
@@ -213,6 +254,18 @@ ColumnLayout {
 
     LatteComponents.CheckBoxesColumn {
         Layout.fillWidth: true
+
+        LatteComponents.CheckBox {
+            Layout.maximumWidth: dialog.optionsWidth
+            text: i18n("Show indicators for applets")
+            checked: indicator.configuration.enabledForApplets
+            tooltip: i18n("Indicators are shown for applets")
+            visible: deprecatedPropertiesAreHidden
+
+            onClicked: {
+                indicator.configuration.enabledForApplets = !indicator.configuration.enabledForApplets;
+            }
+        }
 
         LatteComponents.CheckBox {
             id: shapesBorder
