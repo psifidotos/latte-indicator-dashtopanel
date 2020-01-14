@@ -1,5 +1,9 @@
 ### CHANGELOG
 
+#### Version 0.4.0
+
+* support its own lengthPadding and enabledForApplets introduced in Latte v0.10
+
 #### Version 0.3.1
 
 * support floating docks and panels
