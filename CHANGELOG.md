@@ -1,5 +1,9 @@
 ### CHANGELOG
 
+#### Version 0.4.1
+
+* fix compatibility with Latte 0.10
+
 #### Version 0.4.0
 
 * support its own lengthPadding and enabledForApplets introduced in Latte v0.10
