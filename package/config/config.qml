@@ -52,11 +52,6 @@ ColumnLayout {
 
             ExclusiveGroup {
                 id: styleGroup
-                onCurrentChanged: {
-                    if (current.checked) {
-                        indicator.configuration.style = current.style;
-                    }
-                }
             }
 
             PlasmaComponents.Button {
@@ -65,11 +60,17 @@ ColumnLayout {
 
                 text: i18nc("metro style","Metro")
                 checked: parent.style === style
-                checkable: true
+                checkable: false
                 exclusiveGroup: styleGroup
                 tooltip: i18n("Use Metro style for item states")
 
                 readonly property int style: 0 /*Metro*/
+
+                onPressedChanged: {
+                    if (pressed) {
+                        indicator.configuration.style = style;
+                    }
+                }
             }
 
             PlasmaComponents.Button {
@@ -78,11 +79,17 @@ ColumnLayout {
 
                 text: i18nc("ciliora style", "Ciliora")
                 checked: parent.style === style
-                checkable: true
+                checkable: false
                 exclusiveGroup: styleGroup
                 tooltip: i18n("Use Ciliora style for item states")
 
                 readonly property int style: 1 /*Ciliora*/
+
+                onPressedChanged: {
+                    if (pressed) {
+                        indicator.configuration.style = style;
+                    }
+                }
             }
 
             PlasmaComponents.Button {
@@ -91,11 +98,17 @@ ColumnLayout {
 
                 text: i18nc("dashes style", "Dashes")
                 checked: parent.style === style
-                checkable: true
+                checkable: false
                 exclusiveGroup: styleGroup
                 tooltip: i18n("Use Dashes style for item states")
 
                 readonly property int style: 2 /*Dashes*/
+
+                onPressedChanged: {
+                    if (pressed) {
+                        indicator.configuration.style = style;
+                    }
+                }
             }
         }
     }
