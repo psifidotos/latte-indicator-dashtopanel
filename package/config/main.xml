@@ -28,5 +28,8 @@
     <entry name="lengthPadding" type="Double">
         <default>0.10</default>
     </entry>
+    <entry name="enableCounterShading" type="Bool">
+        <default>true</default>
+    </entry> 
   </group>
 </kcfg>
