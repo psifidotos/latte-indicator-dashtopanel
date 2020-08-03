@@ -73,18 +73,22 @@ LatteComponents.IndicatorItem {
                 return 0.25;
             } else if (indicator.configuration.maxBackgroundOpacity >= 0.3) {
                 return 0.12;
+            } else if (indicator.configuration.maxBackgroundOpacity >= 0.05) {
+                return 0.05;
             }
-
-            return 0.05;
+            
+            return 0;
         }
 
         opacity: {
-            if (indicator.isHovered && indicator.hasActive) {
-                return indicator.configuration.maxBackgroundOpacity;
-            } else if (indicator.hasActive) {
-                return indicator.configuration.maxBackgroundOpacity - opacityStep;
-            } else if (indicator.isHovered) {
-                return indicator.configuration.maxBackgroundOpacity - 2*opacityStep;
+            if (indicator.configuration.maxBackgroundOpacity != 0) {
+                if (indicator.isHovered && indicator.hasActive) {
+                    return indicator.configuration.maxBackgroundOpacity;
+                } else if (indicator.hasActive) {
+                    return indicator.configuration.maxBackgroundOpacity - opacityStep;
+                } else if (indicator.isHovered) {
+                    return indicator.configuration.maxBackgroundOpacity - 2*opacityStep;
+                }
             }
 
             return 0;
