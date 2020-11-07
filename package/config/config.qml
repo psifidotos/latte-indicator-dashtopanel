@@ -292,7 +292,7 @@ ColumnLayout {
         
         LatteComponents.CheckBox {
             Layout.maximumWidth: dialog.optionsWidth
-            text: i18n("Shade indicators")
+            text: i18n("Shade indicators for grouped tasks")
             checked: indicator.configuration.enableCounterShading
             tooltip: i18n("Indicators past the first are shaded")
             visible: deprecatedPropertiesAreHidden        
