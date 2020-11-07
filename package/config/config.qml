@@ -289,5 +289,17 @@ ColumnLayout {
                 indicator.configuration.isReversed = !indicator.configuration.isReversed;
             }
         }
+        
+        LatteComponents.CheckBox {
+            Layout.maximumWidth: dialog.optionsWidth
+            text: i18n("Shade indicators")
+            checked: indicator.configuration.enableCounterShading
+            tooltip: i18n("Indicators past the first are shaded")
+            visible: deprecatedPropertiesAreHidden        
+
+            onClicked: {
+                indicator.configuration.enableCounterShading = !indicator.configuration.enableCounterShading;
+            }
+        }
     }
 }

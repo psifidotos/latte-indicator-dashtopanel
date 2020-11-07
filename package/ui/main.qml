@@ -57,6 +57,13 @@ LatteComponents.IndicatorItem {
         when: root.hasOwnProperty("lengthPadding")
         value: indicator.configuration.lengthPadding
     }
+    
+    Binding{
+        target: root
+        property: "enableCounterShading"
+        when: root.hasOwnProperty("enableCounterShading")
+        value: indicator.configuration.enableCounterShading
+    }
 
     //! Background
     Rectangle {
@@ -138,7 +145,7 @@ LatteComponents.IndicatorItem {
                 Layout.minimumHeight: isHorizontal ? boxesLayout.thickness : boxesLayout.minLength
                 Layout.maximumHeight: isVertical && isFirst ? -1 : (isVertical ? boxesLayout.minLength : boxesLayout.thickness)
 
-                color: isMetroStyle && !isFirst ? indicator.iconBackgroundColor : indicator.iconGlowColor
+                color: indicator.configuration.enableCounterShading && !isFirst ? indicator.iconBackgroundColor : indicator.iconGlowColor
 
                 readonly property bool isFirst: index === 0
             }
