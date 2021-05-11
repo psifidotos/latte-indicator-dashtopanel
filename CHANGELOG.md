@@ -1,5 +1,11 @@
 ### CHANGELOG
 
+#### Version 0.5.0
+
+* support full background transparency
+* app option for shaded grouped indicators
+* update config ui
+
 #### Version 0.4.1
 
 * fix compatibility with Latte 0.10
