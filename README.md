@@ -22,7 +22,7 @@ This is a "Dash To Panel" style indicator for [Latte Dock](https://phabricator.k
 </p>
 
 <p align="center">
-<img src="https://imgur.com/Ufu9jRM.png" width="480" ><br/>
+<img src="https://i.imgur.com/ZKGyOWJ.png" width="480" ><br/>
 <i>indicator options</i>
 </p>
 
